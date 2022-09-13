@@ -18,6 +18,14 @@ function Projects() {
 		loadProjects();
 	}, []);
 
+	if (projects.length === 0) {
+		return (
+			<p className='text-center font-weight-normal'>
+				There are no projects to display.
+			</p>
+		);
+	}
+
 	return (
 		<>
 			<main

@@ -49,7 +49,7 @@ const ProjectForm = () => {
 		e.preventDefault();
 		//TODO: Validation logic to be added
 		await projectService.addProject(newProject);
-		history.push('/projects');
+		history.replace('/projects');
 		toast('Your project is posted successfully');
 	};
 

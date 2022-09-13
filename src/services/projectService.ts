@@ -25,6 +25,7 @@ class ProjectService {
 	}
 
 	async addProject(data: INewProject) {
+		console.log('Customer->Project Info::', data);
 		const response = await this.http.post<IProject>('/projects', { data });
 		console.log('Error:', response);
 		return response;
